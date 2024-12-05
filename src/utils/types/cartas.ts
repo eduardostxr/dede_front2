@@ -16,7 +16,7 @@ export interface CartaI {
   comercio: boolean
   foto: string
   descricao: string
-  raridade: String
+  raridade: string
   nacionalidade: NacionalidadeI
   nacionalidadeId: number,
   clienteId: number,

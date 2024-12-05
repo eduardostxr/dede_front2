@@ -1,7 +1,5 @@
 'use client'
 import { useEffect, useState } from "react"
-import Link from 'next/link'
-
 import { PropostaI } from "@/utils/types/propostas"
 import ItemProposta from "@/components/ItemProposta"
 

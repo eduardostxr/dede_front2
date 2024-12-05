@@ -86,7 +86,9 @@ function NovoCarta() {
     }
   }
 
-  interface FotoChangeEvent extends React.ChangeEvent<HTMLSelectElement> { }
+/* eslint-disable @typescript-eslint/no-empty-interface */
+interface FotoChangeEvent extends React.ChangeEvent<HTMLSelectElement> { }
+/* eslint-enable @typescript-eslint/no-empty-interface */
 
   const handleFotoChange = (event: FotoChangeEvent) => {
     setSelectedFoto(event.target.value);
