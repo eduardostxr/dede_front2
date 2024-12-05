@@ -22,7 +22,7 @@ export default function Home() {
   async function verificaLogin(data: Inputs) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/admins/login`, {
       method: "POST",
-      headers: {"Content-type": "Application/json"},
+      headers: {"Content-type": "application/json"},
       body: JSON.stringify({email: data.email, senha: data.senha})
     })
 
