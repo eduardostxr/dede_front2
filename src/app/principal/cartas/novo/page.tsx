@@ -83,11 +83,10 @@ function NovoCarta() {
     }
   }
 
-  interface FotoChangeEvent extends React.ChangeEvent<HTMLSelectElement> {}
-
-  const handleFotoChange = (event: FotoChangeEvent) => {
+  const handleFotoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedFoto(event.target.value);
   };
+  
 
   return (
     <div className="bg-gray-900">
