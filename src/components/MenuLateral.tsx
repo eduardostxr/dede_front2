@@ -6,6 +6,7 @@ import { BiSolidDashboard } from "react-icons/bi"
 import { FaCarSide} from "react-icons/fa6"
 import { BsCashCoin } from "react-icons/bs"
 import Link from "next/link"
+import { FaIdCardAlt } from "react-icons/fa"
 
 export function MenuLateral() {
   const router = useRouter()
@@ -34,7 +35,7 @@ export function MenuLateral() {
           <li>
             <Link href="/principal/cartas" className="flex items-center p-2">
               <span className="h-5 text-gray-500 text-2xl">
-                <FaCarSide />
+                <FaIdCardAlt />
               </span>
               <span className="ms-2 mt-1">Cadastro de Cartas</span>
             </Link>
