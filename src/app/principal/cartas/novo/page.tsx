@@ -48,6 +48,7 @@ function NovoCarta() {
   ))
 
   async function incluirCarta(data: Inputs) {
+
     const novaCarta: Inputs = {
       overall: Number(data.overall),
       nome: data.nome,
@@ -66,14 +67,16 @@ function NovoCarta() {
       nacionalidadeId: Number(data.nacionalidadeId),
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/cartas`, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-        Authorization: "Bearer " + Cookies.get("admin_logado_token") as string
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/cartas`,
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+          Authorization: "Bearer " + Cookies.get("admin_logado_token") as string
+        },
+        body: JSON.stringify(novaCarta)
       },
-      body: JSON.stringify(novaCarta)
-    })
+    )
 
     if (response.status == 201) {
       toast.success("Ok! Carta cadastrada com sucesso")
@@ -86,7 +89,7 @@ function NovoCarta() {
   const handleFotoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedFoto(event.target.value);
   };
-  
+
 
   return (
 
