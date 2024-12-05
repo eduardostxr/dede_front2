@@ -89,6 +89,7 @@ function NovoCarta() {
   
 
   return (
+
     <div className="bg-gray-900">
       <h1 className="pb-10 pt-24 text-2xl font-bold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white me-56">
         Inclusão de Cartas
@@ -125,8 +126,7 @@ function NovoCarta() {
               </select>
               <div className="mb-3">
                 <label htmlFor="anoNascimento" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Nascimento(Ano)
-                </label>
+                  Nascimento(Ano)</label>
                 <input type="number" id="anoNascimento"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
                   {...register("anoNascimento")}
@@ -135,8 +135,7 @@ function NovoCarta() {
             </div>
             <div className="pb-3">
               <label htmlFor="nome" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Nome do Jogador
-              </label>
+                Nome do Jogador</label>
               <input type="text" id="nome"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
                 {...register("nome")}
@@ -144,8 +143,7 @@ function NovoCarta() {
             </div>
             <div className="mb-3">
               <label htmlFor="nacionalidadeId" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Nacionalidade
-              </label>
+                Nacionalidade</label>
               <select id="nacionalidadeId"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
                 {...register("nacionalidadeId")}
@@ -164,7 +162,6 @@ function NovoCarta() {
             )}
           </div>
         </div>
-
         <div className="grid gap-6 mb-3 md:grid-cols-2">
           <div className="mb-3">
             <label htmlFor="preco" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -181,8 +178,7 @@ function NovoCarta() {
           </div>
           <div className="mb-3">
             <label htmlFor="raridade" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Raridade
-            </label>
+              Raridade</label>
             <select id="raridade"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
               {...register("raridade")}
@@ -193,43 +189,83 @@ function NovoCarta() {
               <option>BRONZE</option>
             </select>
           </div>
+          {/* <div className="mb-3">
+            <label htmlFor="velocidade" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Velocidade</label>
+            <input type="number" id="velocidade"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              {...register("velocidade")}
+            />
+          </div> */}
         </div>
-
         <div className="grid gap-6 mb-3 md:grid-cols-7">
           <div className="mb-3">
             <label htmlFor="velocidade" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Velocidade
-            </label>
-            <input type="number" id="velocidade" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              Velocidade</label>
+            <input type="number" id="velocidade"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
               {...register("velocidade")}
             />
           </div>
-
+          <div className="mb-3">
+            <label htmlFor="chute" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Chute</label>
+            <input type="number" id="chute"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              {...register("chute")}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="passe" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Passe</label>
+            <input type="number" id="passe"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              {...register("passe")}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="drible" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Drible</label>
+            <input type="number" id="drible"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              {...register("drible")}
+            />
+          </div>
           <div className="mb-3">
             <label htmlFor="fisico" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Físico
-            </label>
-            <input type="number" id="fisico" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              Físico</label>
+            <input type="number" id="fisico"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
               {...register("fisico")}
             />
           </div>
-
           <div className="mb-3">
             <label htmlFor="defesa" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Defesa
-            </label>
-            <input type="number" id="defesa" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              Defesa</label>
+            <input type="number" id="defesa"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
               {...register("defesa")}
             />
           </div>
+          <div className="mb-3">
+            <label htmlFor="overall" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Overall</label>
+            <input type="number" id="overall"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required
+              {...register("overall")}
+            />
+          </div>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="sinopse" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            Descrição</label>
+          <textarea id="descricao" rows={4}
+            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            {...register("descricao")}></textarea>
         </div>
 
-        <button
-          type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Cadastrar Carta
-        </button>
+        <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Incluir</button>
       </form>
     </div>
   )
